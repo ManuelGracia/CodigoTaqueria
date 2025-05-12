@@ -1,0 +1,105 @@
+/* Estilos generales del cuerpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2c2727; /* Fondo oscuro */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 180%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  background-color: #3a3333; /* Fondo del contenedor */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Sección del perfil */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #c0c0c0;
+  background-color: #d3d3d3;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.profile label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.profile input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 200px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Sección de acciones */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Espaciado uniforme entre botones */
+  align-items: center;
+  width: 100%;
+}
+
+.btn {
+  background-color: #8B141E; /* Rojo principal */
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #A4161A; /* Rojo más claro para hover */
+}
+
+.generate-ticket-btn:hover {
+  background-color: #A4161A; /* Rojo más claro para hover */
+}
+
+/* Botón de retroceso */
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  margin-top: 20px;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #8B141E; /* Rojo principal */
+}

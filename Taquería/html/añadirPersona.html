@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Añadir Persona</title>
+  <link rel="stylesheet" href="../css/añadirPersona.css">
+</head>
+<body>
+  <div class="container">
+    <div class="mesa-display">
+      <span id="mesa-seleccionada"></span>
+    </div>
+
+    <!-- Mostrar el número de la persona -->
+    <div class="persona-display">
+      <h2 id="persona-seleccionada"></h2>
+    </div>
+
+    <!-- Opciones -->
+    <div class="persona-opciones">
+      <button class="btn-opcion">Comidas</button>
+      <button class="btn-opcion">Bebidas</button>
+      <button class="btn-opcion">Postres</button>
+    </div>
+
+    <button class="btn-agregar" id="btn-agregar-persona">Agregar a la orden</button>
+  </div>
+
+  <script>
+    // Obtener los parámetros de la URL
+    const params = new URLSearchParams(window.location.search);
+    const mesa = params.get('mesa'); // Captura el valor del parámetro 'mesa'
+    const persona = parseInt(params.get('persona')) || 1; // Captura el valor del parámetro 'persona'
+
+    // Mostrar el número de la mesa
+    document.getElementById('mesa-seleccionada').textContent = `Mesa ${mesa}`;
+
+    // Mostrar el número de la persona
+    document.getElementById('persona-seleccionada').textContent = `Persona ${persona}`;
+
+    // Botón para agregar a la orden
+    const btnAgregarPersona = document.getElementById('btn-agregar-persona');
+
+    // Evento para redirigir a la página seleccionarPedidos.html
+    btnAgregarPersona.addEventListener('click', () => {
+      const siguientePersona = persona + 1; // Incrementar el contador de personas
+      window.location.href = `seleccionarPedido.html?mesa=${mesa}&persona=${siguientePersona}`;
+    });
+  </script>
+</body>
+</html>
