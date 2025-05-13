@@ -1,0 +1,39 @@
+<!-- Este archivo representa la página para mostrar la disponibilidad de mesas en el sistema de gestión de pedidos.
+Proporciona una interfaz gráfica que permite al mesero seleccionar una mesa específica para gestionar los pedidos. 
+Incluye una lista de botones, cada uno representando una mesa numerada, que redirigen a la página de selección de
+pedidos con el número de mesa correspondiente. La funcionalidad de redirección se implementa mediante una función 
+JavaScript que pasa el número de la mesa como parámetro en la URL. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesas Disponibles</title>
+  <link rel="stylesheet" href="/css/Mesero/disponibilidadMesas.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Seleccionar mesa:</h1>
+
+    <!-- Lista de mesas -->
+    <div class="mesa-lista">
+      <button class="btn-mesa" onclick="redirigirMesa(1)">Mesa 1</button>
+      <button class="btn-mesa" onclick="redirigirMesa(2)">Mesa 2</button>
+      <button class="btn-mesa" onclick="redirigirMesa(3)">Mesa 3</button>
+      <button class="btn-mesa" onclick="redirigirMesa(4)">Mesa 4</button>
+      <button class="btn-mesa" onclick="redirigirMesa(5)">Mesa 5</button>
+      <button class="btn-mesa" onclick="redirigirMesa(6)">Mesa 6</button>
+      <button class="btn-mesa" onclick="redirigirMesa(7)">Mesa 7</button>
+      <button class="btn-mesa" onclick="redirigirMesa(8)">Mesa 8</button>
+    </div>
+  </div>
+
+  <script>
+    function redirigirMesa(mesa) {
+      // Redirigir a la página de seleccionar pedidos con el número de la mesa
+      window.location.href = `tomarPedido.html?mesa=${mesa}`;
+    }
+  </script>
+</body>
+</html>
